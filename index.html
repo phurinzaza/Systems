@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="sunset">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">BMR Calculator</a>
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="./index.html">BMR</a></li>
+            <li><a href="./index.htm">BMI</a></li>
+          </ul>
+        </div>
+      </div>
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="card w-96 bg-white shadow-xl p-6">
+            <h2 class="text-2xl font-bold text-center mb-6">BMR Calculator</h2>
+
+            <form id="bmr-form">
+                <div class="mb-4">
+                    <label for="age" class="block text-gray-700">Age</label>
+                    <input type="number" id="age" class="input input-bordered w-full" placeholder="Enter your age" required>
+                </div>
+                <div class="mb-4">
+                    <label for="weight" class="block text-gray-700">Weight (kg)</label>
+                    <input type="number" id="weight" class="input input-bordered w-full" placeholder="Enter your weight" required>
+                </div>
+                <div class="mb-4">
+                    <label for="height" class="block text-gray-700">Height (cm)</label>
+                    <input type="number" id="height" class="input input-bordered w-full" placeholder="Enter your height" required>
+                </div>
+                <div class="mb-4">
+                    <label for="gender" class="block text-gray-700">Gender</label>
+                    <select id="gender" class="select select-bordered w-full">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="mb-4 text-center">
+                    <button type="submit" class="btn btn-primary w-full">Calculate BMR</button>
+                </div>
+            </form>
+            <div id="result" class="hidden text-center mt-4">
+                <div class="alert alert-success">
+                    <span>Your BMR is: <span id="bmr-value" class="font-bold"></span> kcal/day</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./Scripts/main.js"></script>
+</html>
